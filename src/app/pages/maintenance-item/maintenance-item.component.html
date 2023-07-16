@@ -1,0 +1,85 @@
+<section>
+	<p-panel
+		header="Maintenance - {{
+			isEditing ? 'item: ' + editingProduct?.id : 'new item'
+		}}"
+	>
+		<form
+			*ngIf="form"
+			[formGroup]="form"
+			class="grid py-4"
+			(ngSubmit)="onSubmit()"
+		>
+			<div class="field col">
+				<span class="p-float-label">
+					<input
+						pInputText
+						type="text"
+						class="full-width"
+						formControlName="name"
+						[ngClass]="{
+							'ng-invalid ng-dirty':
+								(form.invalid &&
+									(form.dirty || form.touched)) ||
+								!isValid
+						}"
+					/>
+					<label for="float-input">Name</label>
+					<small
+						*ngIf="
+							(form.invalid && (form.dirty || form.touched)) ||
+							!isValid
+						"
+						id="username2-help"
+						class="p-error block"
+						>Invalid or missing product name.</small
+					>
+				</span>
+			</div>
+			<div class="field col-fixed">
+				<span class="p-float-label">
+					<p-inputNumber
+						mode="decimal"
+						locale="pt-BR"
+						[minFractionDigits]="2"
+						formControlName="price"
+						[ngClass]="{
+							'ng-invalid ng-dirty':
+								(form.invalid &&
+									(form.dirty || form.touched)) ||
+								!isValid
+						}"
+					></p-inputNumber>
+					<label for="float-input">Price</label>
+					<small
+						*ngIf="
+							(form.invalid && (form.dirty || form.touched)) ||
+							!isValid
+						"
+						id="username2-help"
+						class="p-error block"
+						>Invalid or missing product price.</small
+					>
+				</span>
+			</div>
+			<div class="col-12 flex justify-content-end gap-4">
+				<button
+					pButton
+					type="submit"
+					label="Add"
+					icon="pi pi-plus"
+					class="p-button-success"
+				></button>
+				<button
+					pButton
+					label="Clear"
+					icon="pi pi-eraser"
+					class="p-button-danger"
+					(click)="clearForm()"
+				></button>
+			</div>
+		</form>
+	</p-panel>
+</section>
+
+<p-toast position="top-right"></p-toast>

@@ -1,0 +1,13 @@
+<section>
+	<p-panel header="Items">
+		<ul *ngIf="products && products.length > 0">
+			<app-view
+				(reloadEvent)="onDelete($event)"
+				*ngFor="let product of products"
+				[product]="product"
+			></app-view>
+		</ul>
+	</p-panel>
+</section>
+
+<p-toast position="top-right"></p-toast>

@@ -1,0 +1,16 @@
+.p-button {
+	height: 42px;
+	color: var(--typg-font-color-100) !important;
+}
+
+.p-button-danger {
+	background-color: var(--error-color) !important;
+}
+
+.p-button-success {
+	background-color: var(--success-color) !important;
+}
+
+.active {
+	background-color: var(--primary-color-500);
+}

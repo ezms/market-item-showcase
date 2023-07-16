@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'primeflex/primeflex.scss';
+@import url('./_variables.scss');
+@import url('./_utils.scss');
+@import url('./_normalize.scss');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg-color-0);
+	color: var(--typg-default-font-color);
+	font-family: Arial, sans-serif;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--typg-default-font-color);
+}
+
+img {
+	object-fit: cover;
+}

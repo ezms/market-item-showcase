@@ -1,0 +1,19 @@
+<button
+	pButton
+	label="About"
+	(click)="open()"
+	icon="pi pi-question-circle"
+	class="p-button-raised p-button-text"
+></button>
+<p-dialog [(visible)]="display" header="About">
+	<pre>
+        Yello! This is a remake from one of my firsts Angular projects
+        made for learn to use IndexedDB in DevTools Application tab. Hope u enjoy!
+        
+        Where to find me: 
+        <ol class="flex flex-column gap-4">
+            <li><a class="link-external" href="https://github.com/ezms" target="_blank"><span class="pi pi-github"></span> Github</a></li>
+            <li><a class="link-external" href="https://www.linkedin.com/in/emanuelzmartins/" target="_blank"><span class="pi pi-linkedin"></span> Linkedin</a></li>
+        </ol>
+    </pre>
+</p-dialog>

@@ -1,0 +1,16 @@
+.list {
+	transition: all 0.2s;
+	border-radius: 5px;
+
+	&:hover {
+		background-color: var(--primary-color-700);
+	}
+}
+
+.btn-delete {
+	color: var(--error-color) !important;
+}
+
+.btn-update {
+	color: var(--warn-color) !important;
+}
