@@ -5,7 +5,12 @@
 	icon="pi pi-question-circle"
 	class="p-button-raised p-button-text"
 ></button>
-<p-dialog [(visible)]="display" header="About">
+<p-dialog
+	[(visible)]="display"
+	header="About"
+	[modal]="true"
+	[closeOnEscape]="true"
+>
 	<pre>
         Yello! This is a remake from one of my firsts Angular projects
         made for learn to use IndexedDB in DevTools Application tab. Hope u enjoy!

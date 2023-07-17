@@ -1,12 +1,12 @@
-<tr class="list p-2 grid align-items-center">
-	<td class="col-fixed">
+<li class="list p-2 grid align-items-center">
+	<div class="col-fixed">
 		<span>{{ product.id }}</span>
-	</td>
-	<td class="col flex justify-content-between align-items-center">
+	</div>
+	<div class="col flex justify-content-between align-items-center">
 		<h3>{{ product.name }}</h3>
 		<p>{{ product.price | currency: 'BRL' }}</p>
-	</td>
-	<td class="actions col-fixed flex align-items-center">
+	</div>
+	<div class="actions col-fixed flex align-items-center">
 		<a [routerLink]="['/add-item', product.id]" title="Update"
 			><span class="btn-update pi pi-pencil"></span
 		></a>
@@ -19,5 +19,5 @@
 			(click)="delete()"
 			class="btn-delete p-button-rounded p-button-text"
 		></button>
-	</td>
-</tr>
+	</div>
+</li>
